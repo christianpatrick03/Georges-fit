@@ -1,0 +1,46 @@
+body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+.hero { background: url('images/image1.jpeg') center center/cover no-repeat; height: 100vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+.hero h1 { font-size: 3rem; font-weight: bold; }
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 2rem; }
+.video-container iframe, .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about img { width: 100%; border-radius: 15px; }
+footer { background: #000; color: #ccc; padding: 20px 0; text-align: center; margin-top: 50px; }
+
+.stat-box {
+    background: white;
+    border-radius: 15px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .stat-label {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  .icon-box i {
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-box:hover i {
+    transform: scale(1.2);
+  }
+
+  .contact-section a i {
+    transition: transform 0.3s;
+  }
+  .contact-section a:hover i {
+    transform: scale(1.2);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
