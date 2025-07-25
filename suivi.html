@@ -1,53 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santé & Bien-être</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nos Thèmes – Santé, Suivi, Motivation, Résultats</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons (facultatif pour les icônes) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="style.css">
+
   <style>
+    :root {
+      --primary: #0d6efd;
+      --dark: #0f172a;
+      --light: #f8fafc;
+    }
     body {
-      background-color: #f9f9f9;
-      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
     }
-
-    .theme-section {
-      padding: 60px 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 40px;
-    }
-
-    .theme-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #007bff;
-    }
-
-    .theme-section p {
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    .theme-section img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .container h1 {
+    .section-title {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
       text-align: center;
-      margin-bottom: 50px;
-      color: #222;
+    }
+    .theme-card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform .2s ease, box-shadow .2s ease;
+      height: 100%;
+    }
+    .theme-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+    .theme-icon {
+      font-size: 2.2rem;
+      color: var(--primary);
+    }
+    .theme-img {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      object-fit: cover;
+      height: 220px;
+      width: 100%;
+    }
+    .badge-example {
+      background: rgba(13,110,253,.1);
+      color: var(--primary);
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
-
- <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+     <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">GEORGES-FIT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -66,66 +83,133 @@
   </nav>
 
 
-  <div class="container">
-    <h1>Nos Thèmes</h1>
-
-    <!-- Santé & Bien-être -->
-    <div class="theme-section">
-      <h2>🌱 Santé & Bien-être</h2>
-      <p>
-        Nous mettons l’accent sur la santé globale et le bien-être, en combinant une activité physique régulière
-        et une alimentation équilibrée.  
-        <strong>Exemple  :</strong> Un plan d’entraînement de 3 séances par semaine, associé à des conseils
-        nutritionnels simples (réduire les produits industriels, favoriser les aliments frais).
+  <main class="container py-5" id="themes">
+    <header class="section-title">
+      <h1 class="fw-bold">Santé, Suivi, Motivation & Résultats</h1>
+      <p class="text-muted">
+        Une approche globale pour transformer durablement votre corps, votre énergie et vos habitudes.
       </p>
-      <img src="images/plat-equilibré.jpeg" alt="Santé et bien-être">
+    </header>
+
+    <div class="row g-4">
+      <!-- Santé & Bien-être -->
+      <div class="col-md-6 col-lg-6">
+        <article class="card theme-card h-100">
+          <!-- Remplacez src par votre image -->
+          <img src="images/plat-equilibré.jpeg" 
+               alt="Santé et bien-être" class="theme-img" loading="lazy" />
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-heart-pulse theme-icon"></i>
+              <h2 class="h4 mb-0">Santé &amp; Bien-être</h2>
+            </div>
+            <p class="text-muted">
+              Améliorer votre condition physique, votre sommeil et votre niveau d’énergie grâce à une hygiène de vie équilibrée.
+            </p>
+            <h6 class="text-uppercase small fw-bold text-secondary mb-2">Exemples concrets</h6>
+            <ul class="mb-3">
+              <li>Programme d’entraînement adapté à votre niveau et à vos contraintes (temps, matériel).</li>
+              <li>Conseils nutritionnels simples à appliquer (batch cooking, portions, équilibre macro).</li>
+              <li>Routines de récupération : mobilité, stretching, respiration.</li>
+            </ul>
+            <span class="badge rounded-pill badge-example">Images : postures correctes, assiettes équilibrées, routine stretching</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Suivi personnalisé -->
+      <div class="col-md-6 col-lg-6">
+        <article class="card theme-card h-100">
+          <img src="images/coaching.jpeg" 
+               alt="Suivi personnalisé" class="theme-img" loading="lazy" />
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-person-check theme-icon"></i>
+              <h2 class="h4 mb-0">Suivi personnalisé</h2>
+            </div>
+            <p class="text-muted">
+              Un accompagnement 100 % adapté : objectifs, historique médical, préférences alimentaires et contraintes de vie.
+            </p>
+            <h6 class="text-uppercase small fw-bold text-secondary mb-2">Exemples concrets</h6>
+            <ul class="mb-3">
+              <li>Bilan initial (mesures, habitudes, douleurs, objectifs précis).</li>
+              <li>Plan ajusté toutes les 1–2 semaines selon vos retours (charges, reps, macros).</li>
+              <li>Support via WhatsApp / email pour corriger les exercices ou clarifier un point nutrition.</li>
+            </ul>
+            <span class="badge rounded-pill badge-example">Images : tableau de progression, capture d’app de suivi, échange coach-client</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Motivation -->
+      <div class="col-md-6 col-lg-6">
+        <article class="card theme-card h-100">
+          <img src="images/IMG_3811.jpg" 
+               alt="Motivation" class="theme-img" loading="lazy" />
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-bullseye theme-icon"></i>
+              <h2 class="h4 mb-0">Motivation</h2>
+            </div>
+            <p class="text-muted">
+              On ne compte pas que sur la volonté : on construit des systèmes et des habitudes solides.
+            </p>
+            <h6 class="text-uppercase small fw-bold text-secondary mb-2">Exemples concrets</h6>
+            <ul class="mb-3">
+              <li>Objectifs SMART (mesurables, datés) et check-points hebdomadaires.</li>
+              <li>Mini-challenges (10 000 pas/j, 3 trainings/semaine, 2 L d’eau/j).</li>
+              <li>Outils d’accountability : to-do, calendriers, rappels, groupe privé.</li>
+            </ul>
+            <span class="badge rounded-pill badge-example">Images : graphiques d’objectifs, citations motivantes, checklist</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Résultats -->
+      <div class="col-md-6 col-lg-6">
+        <article class="card theme-card h-100">
+          <img src="images/pertedepoids.jpg" 
+               alt="Résultats" class="theme-img" loading="lazy" />
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-trophy theme-icon"></i>
+              <h2 class="h4 mb-0">Résultats</h2>
+            </div>
+            <p class="text-muted">
+              Des chiffres et des faits : on suit, on mesure, on ajuste — et on célèbre chaque victoire.
+            </p>
+            <h6 class="text-uppercase small fw-bold text-secondary mb-2">Exemples concrets</h6>
+            <ul class="mb-3">
+              <li>Perte de poids, réduction du tour de taille, amélioration des perfs (rep max, VMA...).</li>
+              <li>Comparatifs avant/après (photos, mensurations, charges soulevées).</li>
+              <li>Rapports mensuels avec graphiques (poids, % BF, perfs, adhérence au plan).</li>
+            </ul>
+            <span class="badge rounded-pill badge-example">Images : avant/après, graphiques de progression, records personnels</span>
+          </div>
+        </article>
+      </div>
     </div>
 
-    <!-- Suivi personnalisé -->
-    <div class="theme-section">
-      <h2>👨‍🏫 Suivi personnalisé</h2>
-      <p>
-        Chaque personne est unique, c’est pourquoi nous proposons un accompagnement sur-mesure en fonction de vos
-        besoins et objectifs.  
-        <strong>Exemple :</strong> Un suivi hebdomadaire via des appels ou messages pour ajuster vos séances
-        et votre alimentation.
-      </p>
-      <img src="images/coaching.jpeg" alt="Suivi personnalisé">
-    </div>
+    <!-- CTA -->
+    <section class="text-center mt-5">
+      <h3 class="fw-bold mb-3">Envie de démarrer ?</h3>
+      <p class="text-muted mb-4">Parlons de vos objectifs et construisons un plan sur-mesure.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Me contacter</a>
+    </section>
+  </main>
 
-    <!-- Motivation -->
-    <div class="theme-section">
-      <h2>🔥 Motivation</h2>
-      <p>
-        La clé de la réussite réside dans la régularité et la motivation. Nous vous aidons à rester motivé avec des
-        défis, des conseils et un accompagnement mental.  
-        <strong>Exemple :</strong> Mise en place de petits objectifs atteignables chaque semaine (ex: +10 pompes).
-      </p>
-      <img src="images/IMG_3811.jpg" alt="Motivation">
-    </div>
-
-    <!-- Résultats -->
-    <div class="theme-section">
-      <h2>🏆 Résultats</h2>
-      <p>
-        Notre approche se concentre sur des résultats durables et mesurables, comme une meilleure énergie, une perte
-        de poids saine ou un gain de force.  
-        <strong>Exemple :</strong> Témoignages clients avec photos avant/après ou statistiques de progression.
-      </p>
-      <img src="images/pertedepoids.jpg" alt="Résultats">
-    </div>
-  </div>
-
-  
-<!-- Footer -->
-<footer>
+   <!-- Footer -->
+   <footer>
         
     <div class="container">
     <p>&copy; 2025 Coach Alpha. Tous droits réservés.</p>
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Bootstrap JS (facultatif si vous n’en avez pas besoin) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+ 
+
