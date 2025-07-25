@@ -1,5 +1,5 @@
 body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
-.hero { background: url('images/image1.jpeg') center center/cover no-repeat; height: 100vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+.hero { background: url('images/image1.jpeg') center center/cover no-repeat; height: 100vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; opacity: 0,5;}
 .hero h1 { font-size: 3rem; font-weight: bold; }
 .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 2rem; }
 .video-container iframe, .video-container video {
